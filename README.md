@@ -20,6 +20,16 @@ Maintains an Entra ID security group containing Windows 10 devices that:
 
 The script is designed to run as an Azure Automation runbook using a system-assigned managed identity and Microsoft Graph.
 
+#### Remediations
+
+**[Device Return Notification](Intune/Remediations/Device-Return-Notification/)**
+
+Displays a persistent device return notification to the signed-in user.
+
+Designed for situations where devices need to be returned to IT for upgrade or replacement. The notification includes a configurable acknowledgement delay and can be scheduled to reappear using Intune Remediations.
+
+It can optionally be used alongside the Windows 10 Active Device Group Maintenance script to automatically target active Windows 10 devices.
+
 ## Repository structure
 
 Scripts are organised by Microsoft product or administrative area.
@@ -27,8 +37,10 @@ Scripts are organised by Microsoft product or administrative area.
 ```text
 Microsoft-Admin-Scripts
 ├── Intune
-│   └── Group-Maintenance
-│       └── Windows10-Active-Devices
+│   ├── Group-Maintenance
+│   │   └── Windows10-Active-Devices
+│   └── Remediations
+│       └── Device-Return-Notification
 ├── .gitignore
 ├── LICENSE
 └── README.md
