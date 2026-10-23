@@ -30,6 +30,17 @@ Designed for situations where devices need to be returned to IT for upgrade or r
 
 It can optionally be used alongside the Windows 10 Active Device Group Maintenance script to automatically target active Windows 10 devices.
 
+**[UK Language Configuration](Intune/Remediations/UK-Language-Configuration/)**
+
+Configures Windows devices and users with UK English (`en-GB`) language settings using Microsoft Intune Remediations.
+
+The package uses two separate remediations:
+
+- A SYSTEM remediation that installs the required UK language capabilities and configures the system locale and UK time zone.
+- A USER remediation that configures `en-GB` as the user's only preferred language and sets the UK keyboard layout.
+
+The USER remediation must run using the logged-on user's credentials, while the SYSTEM remediation runs in the device SYSTEM context.
+
 ## Repository structure
 
 Scripts are organised by Microsoft product or administrative area.
@@ -40,7 +51,8 @@ Microsoft-Admin-Scripts
 │   ├── Group-Maintenance
 │   │   └── Windows10-Active-Devices
 │   └── Remediations
-│       └── Device-Return-Notification
+│       ├── Device-Return-Notification
+│       └── UK-Language-Configuration
 ├── .gitignore
 ├── LICENSE
 └── README.md
