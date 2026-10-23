@@ -1,0 +1,30 @@
+# Secrets and credentials
+.env
+*.secret
+*.secrets
+secrets.*
+credentials.*
+
+# Certificates and private keys
+*.pfx
+*.p12
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Temporary / backup files
+*.tmp
+*.bak
+*.old
+
+# PowerShell exported credentials / objects
+*.clixml
+
+# VS Code local configuration
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
